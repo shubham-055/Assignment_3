@@ -1,6 +1,6 @@
 Q1. What is shallow & deep copy? How can we do shallow and deep copy in objects?
 
-    A shallow copy of an object produces a new object, but its properties still refer to the properties of the original object. Consequently, modifications to nested objects or arrays within the copied object will impact the original object, and vice versa. In JavaScript, several methods can be used to create a shallow copy, including Object.assign(), the spread operator (...), or the Array.slice() method.
+A shallow copy of an object produces a new object, but its properties still refer to the properties of the original object. Consequently, modifications to nested objects or arrays within the copied object will impact the original object, and vice versa. In JavaScript, several methods can be used to create a shallow copy, including Object.assign(), the spread operator (...), or the Array.slice() method.
 ```js
 const originalObj = { a: 1, b: { c: 2 } };
 const shallowCopy = Object.assign({}, originalObj);
