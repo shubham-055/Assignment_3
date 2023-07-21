@@ -13,7 +13,7 @@ shallowCopy.b.c = 88;
 console.log(originalObj); // Output: { a: 1, b: { c: 88 } }
 
 ```
-    On the other hand, a deep copy of an object generates an entirely independent duplicate of the original object, along with all its nested objects or arrays. Any changes made to the copied object's properties will have no effect on the original object. 
+On the other hand, a deep copy of an object generates an entirely independent duplicate of the original object, along with all its nested objects or arrays. Any changes made to the copied object's properties will have no effect on the original object. 
 ```js
 const originalObj = { a: 1, b: { c: 2 } };
 const deepCopy = JSON.parse(JSON.stringify(originalObj));
@@ -40,7 +40,7 @@ Output :
 10
 ```
 
-    In the function sum we are using rest operator in parameter for taking inputs as we are unaware of number of arguments so all the arguments are received as in one array name "theArgs" and we the using reduce method of arrays to add all the value in array and then return the sum.
+In the function sum we are using rest operator in parameter for taking inputs as we are unaware of number of arguments so all the arguments are received as in one array name "theArgs" and we the using reduce method of arrays to add all the value in array and then return the sum.
 
 Q3. What will be the output?Why?
 ```js
@@ -54,11 +54,11 @@ Output :
 60
 ```
 
-    The addition function takes three parameters (number1, number2, and number3) and logs the sum of these three numbers to the console. When calling the addition function with the spread operator (...), the elements of the numbers array are passed as individual arguments to the function. So, it's equivalent to calling addition(10, 20, 30). The function then calculates the sum of these three numbers (10 + 20 + 30) and logs 60 to the console.
+The addition function takes three parameters (number1, number2, and number3) and logs the sum of these three numbers to the console. When calling the addition function with the spread operator (...), the elements of the numbers array are passed as individual arguments to the function. So, it's equivalent to calling addition(10, 20, 30). The function then calculates the sum of these three numbers (10 + 20 + 30) and logs 60 to the console.
 
 Q4. What is the difference between object and map?
 
-    In JS, an object is a collection of key-value pairs where keys are strings or symbols, and values can be of any data type (including other objects or functions) But Thats not enough for Real world scenario keys are not always just string so thats why maps exist. Maps also store key-value pairs but the keys can be of any datatype even objects,sets,maps can also be key. 
+In JS, an object is a collection of key-value pairs where keys are strings or symbols, and values can be of any data type (including other objects or functions) But Thats not enough for Real world scenario keys are not always just string so thats why maps exist. Maps also store key-value pairs but the keys can be of any datatype even objects,sets,maps can also be key. 
 
     For example : 
 ```js
@@ -78,18 +78,18 @@ console.log(obj)
 
 obj[arr] = 1;
 
-    In JS, when you use an object as a key, it is automatically converted to a string. In this case, the array arr is converted to a string, which results in the string "1,2". So, this line adds a new property to the obj with the key "1,2" and the value 1. Now, the object obj looks like this: { key: "value", "1,2": 1 }.
+In JS, when you use an object as a key, it is automatically converted to a string. In this case, the array arr is converted to a string, which results in the string "1,2". So, this line adds a new property to the obj with the key "1,2" and the value 1. Now, the object obj looks like this: { key: "value", "1,2": 1 }.
     
 obj.arr = 2;
 
-    This adds a new property to the obj with the key "arr" and the value 2. Now, the object obj looks like this: { key: "value", "1,2": 1, arr: 2 }.
+This adds a new property to the obj with the key "arr" and the value 2. Now, the object obj looks like this: { key: "value", "1,2": 1, arr: 2 }.
 
 const map = new Map();
     This creates a new Map named map.
 
 map.set(arr, 1);
 
-    Here, we use the array arr as the key in the Map. Unlike objects, Maps in JavaScript can use complex objects (like arrays) as keys without any implicit conversion. So, we set the value 1 for the key arr in the Map.
+Here, we use the array arr as the key in the Map. Unlike objects, Maps in JavaScript can use complex objects (like arrays) as keys without any implicit conversion. So, we set the value 1 for the key arr in the Map.
 
 console.log(map);
 console.log(obj);
@@ -139,10 +139,10 @@ let keys = map.keys();
 let moreKeys = Array.from(keys);
 moreKeys.push("more");
 ```
-    code will not work because the keys variable is an iterable, not an array.
-    we cannot use array methods on an iterable. To fix the code, we need to convert the keys variable to an array.
+code will not work because the keys variable is an iterable, not an array.
+we cannot use array methods on an iterable. To fix the code, we need to convert the keys variable to an array.
 
-    Array.from() method: create a new array called moreKeys that contains all of the keys from the keys iterable, plus we now use push to add "more" in moreKeys.
+Array.from() method: create a new array called moreKeys that contains all of the keys from the keys iterable, plus we now use push to add "more" in moreKeys.
 
 Corrected code:
 ```js
@@ -161,9 +161,9 @@ Output :
 
 Q8. What is the difference between set and weakset? Explain with the help of examples.
 
-    *Set stores the unique values of any datatype but weaksets can only stores the objects.
-    *Sets can prevent elements from being garbage collected as long as they are part of the Set. But In weaksets it stores the weak references of object so if object reference is deleted from any other mean in the program it also deleted from the weaksets. 
-    *Sets are iteratable but weaksets cannot be iterated over. It only has add, delete, and has methods.
+*Set stores the unique values of any datatype but weaksets can only stores the objects.
+*Sets can prevent elements from being garbage collected as long as they are part of the Set. But In weaksets it stores the weak references of object so if object reference is deleted from any other mean in the program it also deleted from the weaksets. 
+*Sets are iteratable but weaksets cannot be iterated over. It only has add, delete, and has methods.
 
     ```js
 let weakSet = new WeakSet();
@@ -192,9 +192,10 @@ console.log(set); //Set(2) { { name: 'Shubham' }, { name: 'Jain' } }
 
 Q9. What is the difference between map and weakmap? Explain with the help of examples.
 
-    *Map stores the unique Key-values pairs of any datatype but weakMaps can only stores the objects as keys.
-    *Maps can prevent elements from being garbage collected as long as they are part of the Map. But In weakMap it stores the weak references of object(keys) so if object reference is deleted from any other mean in the program it also delete that key-value pair from the weakmaps. 
-    *Maps are iteratable but weakmaps cannot be iterated over. It only has add, delete, get and has methods.
+ *Map stores the unique Key-values pairs of any datatype but weakMaps can only stores the objects as keys.
+ *Maps can prevent elements from being garbage collected as long as they are part of the Map. But In weakMap it stores the weak references 
+  of object(keys) so if object reference is deleted from any other mean in the program it also delete that key-value pair from the weakmaps. 
+ *Maps are iteratable but weakmaps cannot be iterated over. It only has add, delete, get and has methods.
 
     ```js
 let weakmap = new WeakMap();
