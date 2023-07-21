@@ -161,7 +161,9 @@ Output :
 Q8. What is the difference between set and weakset? Explain with the help of examples.
 
 *Set stores the unique values of any datatype but weaksets can only stores the objects.
+
 *Sets can prevent elements from being garbage collected as long as they are part of the Set. But In weaksets it stores the weak references of object so if object reference is deleted from any other mean in the program it also deleted from the weaksets. 
+
 *Sets are iteratable but weaksets cannot be iterated over. It only has add, delete, and has methods.
 
 ```js
@@ -192,11 +194,13 @@ console.log(set); //Set(2) { { name: 'Shubham' }, { name: 'Jain' } }
 Q9. What is the difference between map and weakmap? Explain with the help of examples.
 
  *Map stores the unique Key-values pairs of any datatype but weakMaps can only stores the objects as keys.
+ 
  *Maps can prevent elements from being garbage collected as long as they are part of the Map. But In weakMap it stores the weak references 
   of object(keys) so if object reference is deleted from any other mean in the program it also delete that key-value pair from the weakmaps. 
+  
  *Maps are iteratable but weakmaps cannot be iterated over. It only has add, delete, get and has methods.
 
-    ```js
+```js
 let weakmap = new WeakMap();
 let map = new Map();
 let obj1 = { name: "Shubham" };
