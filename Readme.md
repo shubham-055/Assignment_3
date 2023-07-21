@@ -157,7 +157,6 @@ console.log(moreKeys);
 Output :
 ["key", "more"]
 ```
----
 
 Q8. What is the difference between set and weakset? Explain with the help of examples.
 
@@ -165,7 +164,7 @@ Q8. What is the difference between set and weakset? Explain with the help of exa
 *Sets can prevent elements from being garbage collected as long as they are part of the Set. But In weaksets it stores the weak references of object so if object reference is deleted from any other mean in the program it also deleted from the weaksets. 
 *Sets are iteratable but weaksets cannot be iterated over. It only has add, delete, and has methods.
 
-    ```js
+```js
 let weakSet = new WeakSet();
 let set = new Set();
 let obj1 = { name: "Shubham" };
